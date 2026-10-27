@@ -243,6 +243,58 @@ export const processSteps: ProcessStep[] = [
   },
 ]
 
+export type TestimonialItem = {
+  id: string
+  quote: string
+  name: string
+  projectType: string
+}
+
+export const testimonials: TestimonialItem[] = [
+  {
+    id: 'sample-01',
+    quote:
+      'The team took the time to understand our requirements and helped us shape our ideas into a clear digital solution. The focus on usability and design made the overall experience feel professional.',
+    name: 'Sample Client 01',
+    projectType: 'Website Development',
+  },
+  {
+    id: 'sample-02',
+    quote:
+      'We wanted a website that presented our business clearly and professionally. The approach focused on making information easy to find and creating a straightforward experience for visitors.',
+    name: 'Sample Client 02',
+    projectType: 'Business Website',
+  },
+  {
+    id: 'sample-03',
+    quote:
+      'Building a digital product requires more than just writing code. A clear plan, thoughtful design, and attention to functionality are important parts of creating a solution that works well.',
+    name: 'Sample Client 03',
+    projectType: 'Web Application',
+  },
+  {
+    id: 'sample-04',
+    quote:
+      'A well-designed website should look professional while remaining simple to navigate. We value digital experiences that help customers understand a business and its services without unnecessary complexity.',
+    name: 'Sample Client 04',
+    projectType: 'UI/UX Design',
+  },
+  {
+    id: 'sample-05',
+    quote:
+      'Reliable software should support real business needs and allow room for future improvements. Clear requirements and a structured development approach help make that possible.',
+    name: 'Sample Client 05',
+    projectType: 'Custom Software',
+  },
+  {
+    id: 'sample-06',
+    quote:
+      'A good digital experience combines visual quality with practical functionality. Keeping the interface clean and the user journey straightforward can make a meaningful difference for visitors.',
+    name: 'Sample Client 06',
+    projectType: 'Digital Product Development',
+  },
+]
+
 export const projectTypes = [
   { value: 'website', label: 'Website Design & Development' },
   { value: 'webapp', label: 'Custom Web Application' },
