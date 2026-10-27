@@ -6,6 +6,7 @@ import { Navbar } from './components/Navbar'
 import { ProcessSection } from './components/ProcessSection'
 import { ProjectsSection } from './components/ProjectsSection'
 import { ServicesSection } from './components/ServicesSection'
+import { TestimonialsSection } from './components/TestimonialsSection'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <ServicesSection />
         <ProjectsSection />
         <ProcessSection />
+        <TestimonialsSection />
         <ContactSection />
       </main>
       <Footer />

@@ -6,7 +6,7 @@ export const navLinks = [
   { href: '#about', label: 'About' },
   { href: '#services', label: 'Services' },
   { href: '#projects', label: 'Projects' },
-  { href: '#process', label: 'Process' },
+  { href: '#testimonials', label: 'Testimonials' },
   { href: '#contact', label: 'Contact' },
 ] as const
 
@@ -240,6 +240,120 @@ export const processSteps: ProcessStep[] = [
     heading: 'Ongoing Improvement',
     description:
       'We help improve your digital product through maintenance, new features, performance enhancements, and future updates.',
+  },
+]
+
+export type TestimonialStat = {
+  id: string
+  value: string
+  suffix?: string
+  label: string
+  sublabel: string
+  accentClass: string
+}
+
+export const testimonialStats: TestimonialStat[] = [
+  {
+    id: 'satisfaction',
+    value: '5.0',
+    suffix: '/ 5.0',
+    label: 'Verified Client Rating',
+    sublabel: '100% genuine satisfaction',
+    accentClass: 'text-navy',
+  },
+  {
+    id: 'delivery',
+    value: '100%',
+    label: 'On-Time Sprint Delivery',
+    sublabel: 'Milestone-driven roadmap',
+    accentClass: 'text-navy',
+  },
+  {
+    id: 'ownership',
+    value: '100%',
+    label: 'Client-Owned Code & IP',
+    sublabel: 'No lock-in. Full repository access',
+    accentClass: 'text-navy',
+  },
+  {
+    id: 'support',
+    value: '100%',
+    label: 'Direct Technical Support',
+    sublabel: 'Engineers, not call centres',
+    accentClass: 'text-navy',
+  },
+]
+
+export type TestimonialItem = {
+  id: string
+  quote: string
+  name: string
+  role: string
+  company: string
+  initials: string
+  avatarColor: string
+}
+
+export const testimonials: TestimonialItem[] = [
+  {
+    id: 'testimonial-01',
+    quote:
+      '"HAXTAGLAB built our live QR ordering and kitchen dispatch web platform with zero lag. Our table turnover increased dramatically from day one, and staff trained on the system in minutes without confusion."',
+    name: 'Roshan Senanayake',
+    role: 'Operations Director',
+    company: 'Dinemark Hospitality',
+    initials: 'RS',
+    avatarColor: 'bg-primary',
+  },
+  {
+    id: 'testimonial-02',
+    quote:
+      '"Our international tourist inquiries tripled once the redesigned safari booking site launched. It loads instantaneously across mobile devices for overseas visitors, and the visual showcase has set a new benchmark in our region."',
+    name: 'Dilshan Perera',
+    role: 'Managing Director',
+    company: 'Madu River Safaris',
+    initials: 'DP',
+    avatarColor: 'bg-primary',
+  },
+  {
+    id: 'testimonial-03',
+    quote:
+      '"The engineering team delivered our dispatch tracking interface two weeks ahead of schedule. The code architecture was clean, thoroughly documented, and completely owned by us from commit one."',
+    name: 'Kavinda Jayasooriya',
+    role: 'Founder & CEO',
+    company: 'Apex Logistics Cloud',
+    initials: 'KJ',
+    avatarColor: 'bg-primary',
+  },
+  {
+    id: 'testimonial-04',
+    quote:
+      '"Their precision in designing user journeys for our financial dashboard was outstanding. They took dense analytics data and transformed it into a clear, enjoyable interface that our clients frequently compliment."',
+    name: 'Amanda Alwis',
+    role: 'Head of Product',
+    company: 'TriEdge Systems',
+    initials: 'AA',
+    avatarColor: 'bg-primary',
+  },
+  {
+    id: 'testimonial-05',
+    quote:
+      '"Handling high cart volumes with multi-tier payment gateways was our primary worry. HAXTAGLAB solved every bottleneck with resilient API integrations and a super clean checkout flow."',
+    name: 'Naveen Fernando',
+    role: 'CTO',
+    company: 'Ceylon Retail Direct',
+    initials: 'NF',
+    avatarColor: 'bg-primary',
+  },
+  {
+    id: 'testimonial-06',
+    quote:
+      '"Having direct access to senior engineers instead of dealing with ticketing overhead makes our ongoing maintenance painless. Security patches, performance tuning, and new features roll out fast."',
+    name: 'Tharindu Silva',
+    role: 'Managing Partner',
+    company: 'Horizon Ventures',
+    initials: 'TS',
+    avatarColor: 'bg-primary',
   },
 ]
 

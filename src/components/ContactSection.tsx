@@ -34,7 +34,7 @@ function validate(values: FormValues): FormErrors {
 export function ContactSection() {
   const [values, setValues] = useState<FormValues>(initialValues)
   const [errors, setErrors] = useState<FormErrors>({})
-  const [status, setStatus] = useState<'idle' | 'ready'>('idle')
+  const [status, setStatus] = useState<'idle' | 'sent'>('idle')
 
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -44,7 +44,26 @@ export function ContactSection() {
       setStatus('idle')
       return
     }
-    setStatus('ready')
+
+    const selectedLabel =
+      projectTypes.find((pt) => pt.value === values.projectType)?.label ?? values.projectType
+
+    const message = [
+      'Hello! I would like to inquire about a project.',
+      '',
+      `Full Name: ${values.fullName.trim()}`,
+      `Email Address: ${values.email.trim()}`,
+      `Project Type: ${selectedLabel}`,
+      '',
+      'Project Details:',
+      values.details.trim(),
+      '',
+      'I look forward to hearing from you. Thank you!',
+    ].join('\n')
+
+    const whatsappUrl = `https://wa.me/94770820853?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
+    setStatus('sent')
   }
 
   const fieldClass =
@@ -161,15 +180,12 @@ export function ContactSection() {
                 </button>
               </div>
 
-              {status === 'ready' ? (
-                <div className="flex items-start gap-2 rounded-lg border border-amber-200 bg-amber-50 p-4 text-xs text-amber-900">
-                  <CheckCircleIcon className="mt-0.5 h-5 w-5 shrink-0 text-amber-700" />
+              {status === 'sent' ? (
+                <div className="flex items-start gap-2 rounded-lg border border-emerald-200 bg-emerald-50 p-4 text-xs text-emerald-900">
+                  <CheckCircleIcon className="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" />
                   <span>
-                    Your details look valid. Email sending is not connected yet — please write to{' '}
-                    <a className="font-semibold underline" href="mailto:contact@haxtaglab.com">
-                      contact@haxtaglab.com
-                    </a>{' '}
-                    directly. A backend or email service still needs to be integrated.
+                    WhatsApp has been opened with your project details. Please review the message
+                    and press <strong>Send</strong> in WhatsApp to complete your inquiry.
                   </span>
                 </div>
               ) : null}
@@ -199,7 +215,7 @@ export function ContactSection() {
                       className="font-medium text-white transition-colors hover:text-cyan-accent"
                       href="mailto:contact@haxtaglab.com"
                     >
-                      contact@haxtaglab.com
+                      haxtaglab@gmail.com
                     </a>
                   </div>
                 </div>
@@ -207,7 +223,7 @@ export function ContactSection() {
                   <ScheduleIcon className="mt-0.5 h-[18px] w-[18px] text-cyan-accent" />
                   <div>
                     <span className="block text-xs text-slate-400">Typical Response Time</span>
-                    <span className="font-medium text-white">Within 24 to 48 business hours</span>
+                    <span className="font-medium text-white">Within 24 business hours</span>
                   </div>
                 </div>
               </div>

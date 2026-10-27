@@ -33,21 +33,25 @@ export function Navbar() {
       className={`fixed top-0 right-0 left-0 z-50 w-full border-b border-border-subtle bg-white/95 backdrop-blur-md transition-all ${scrolled ? 'shadow-sm' : ''}`}
     >
       <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-8 lg:px-16">
-        <a className="group flex items-center gap-3.5" href="#home">
+        <a className="group flex items-center gap-2.5" href="#home">
           <div className="flex h-10 w-auto items-center justify-center">
             <img
               alt="HAXTAGLAB Logo"
-              className="h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.03]"
+              className="h-15 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.03]"
               src={logo}
             />
           </div>
+          <span className="hidden text-[1.25rem] font-bold tracking-tight sm:inline-flex">
+            <span className="text-navy">Haxtag</span>
+            <span className="text-primary">Lab</span>
+          </span>
         </a>
 
         <nav className="hidden items-center gap-9 md:flex" aria-label="Primary">
           {navLinks.map((link) => (
             <a
               key={link.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${active === link.href ? 'text-text-main' : 'text-text-muted'}`}
+              className={`text-sm font-medium transition-colors hover:text-primary ${active === link.href ? 'hover:text-primary text-text-main' : 'text-text-muted'}`}
               href={link.href}
             >
               {link.label}
