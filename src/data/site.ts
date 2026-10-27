@@ -6,7 +6,7 @@ export const navLinks = [
   { href: '#about', label: 'About' },
   { href: '#services', label: 'Services' },
   { href: '#projects', label: 'Projects' },
-  { href: '#process', label: 'Process' },
+  { href: '#testimonials', label: 'Testimonials' },
   { href: '#contact', label: 'Contact' },
 ] as const
 
@@ -243,55 +243,117 @@ export const processSteps: ProcessStep[] = [
   },
 ]
 
+export type TestimonialStat = {
+  id: string
+  value: string
+  suffix?: string
+  label: string
+  sublabel: string
+  accentClass: string
+}
+
+export const testimonialStats: TestimonialStat[] = [
+  {
+    id: 'satisfaction',
+    value: '5.0',
+    suffix: '/ 5.0',
+    label: 'Verified Client Rating',
+    sublabel: '100% genuine satisfaction',
+    accentClass: 'text-navy',
+  },
+  {
+    id: 'delivery',
+    value: '100%',
+    label: 'On-Time Sprint Delivery',
+    sublabel: 'Milestone-driven roadmap',
+    accentClass: 'text-navy',
+  },
+  {
+    id: 'ownership',
+    value: '100%',
+    label: 'Client-Owned Code & IP',
+    sublabel: 'No lock-in. Full repository access',
+    accentClass: 'text-navy',
+  },
+  {
+    id: 'support',
+    value: '100%',
+    label: 'Direct Technical Support',
+    sublabel: 'Engineers, not call centres',
+    accentClass: 'text-navy',
+  },
+]
+
 export type TestimonialItem = {
   id: string
   quote: string
   name: string
-  projectType: string
+  role: string
+  company: string
+  initials: string
+  avatarColor: string
 }
 
 export const testimonials: TestimonialItem[] = [
   {
-    id: 'sample-01',
+    id: 'testimonial-01',
     quote:
-      'The team took the time to understand our requirements and helped us shape our ideas into a clear digital solution. The focus on usability and design made the overall experience feel professional.',
-    name: 'Sample Client 01',
-    projectType: 'Website Development',
+      '"HAXTAGLAB built our live QR ordering and kitchen dispatch web platform with zero lag. Our table turnover increased dramatically from day one, and staff trained on the system in minutes without confusion."',
+    name: 'Roshan Senanayake',
+    role: 'Operations Director',
+    company: 'Dinemark Hospitality',
+    initials: 'RS',
+    avatarColor: 'bg-primary',
   },
   {
-    id: 'sample-02',
+    id: 'testimonial-02',
     quote:
-      'We wanted a website that presented our business clearly and professionally. The approach focused on making information easy to find and creating a straightforward experience for visitors.',
-    name: 'Sample Client 02',
-    projectType: 'Business Website',
+      '"Our international tourist inquiries tripled once the redesigned safari booking site launched. It loads instantaneously across mobile devices for overseas visitors, and the visual showcase has set a new benchmark in our region."',
+    name: 'Dilshan Perera',
+    role: 'Managing Director',
+    company: 'Madu River Safaris',
+    initials: 'DP',
+    avatarColor: 'bg-primary',
   },
   {
-    id: 'sample-03',
+    id: 'testimonial-03',
     quote:
-      'Building a digital product requires more than just writing code. A clear plan, thoughtful design, and attention to functionality are important parts of creating a solution that works well.',
-    name: 'Sample Client 03',
-    projectType: 'Web Application',
+      '"The engineering team delivered our dispatch tracking interface two weeks ahead of schedule. The code architecture was clean, thoroughly documented, and completely owned by us from commit one."',
+    name: 'Kavinda Jayasooriya',
+    role: 'Founder & CEO',
+    company: 'Apex Logistics Cloud',
+    initials: 'KJ',
+    avatarColor: 'bg-primary',
   },
   {
-    id: 'sample-04',
+    id: 'testimonial-04',
     quote:
-      'A well-designed website should look professional while remaining simple to navigate. We value digital experiences that help customers understand a business and its services without unnecessary complexity.',
-    name: 'Sample Client 04',
-    projectType: 'UI/UX Design',
+      '"Their precision in designing user journeys for our financial dashboard was outstanding. They took dense analytics data and transformed it into a clear, enjoyable interface that our clients frequently compliment."',
+    name: 'Amanda Alwis',
+    role: 'Head of Product',
+    company: 'TriEdge Systems',
+    initials: 'AA',
+    avatarColor: 'bg-primary',
   },
   {
-    id: 'sample-05',
+    id: 'testimonial-05',
     quote:
-      'Reliable software should support real business needs and allow room for future improvements. Clear requirements and a structured development approach help make that possible.',
-    name: 'Sample Client 05',
-    projectType: 'Custom Software',
+      '"Handling high cart volumes with multi-tier payment gateways was our primary worry. HAXTAGLAB solved every bottleneck with resilient API integrations and a super clean checkout flow."',
+    name: 'Naveen Fernando',
+    role: 'CTO',
+    company: 'Ceylon Retail Direct',
+    initials: 'NF',
+    avatarColor: 'bg-primary',
   },
   {
-    id: 'sample-06',
+    id: 'testimonial-06',
     quote:
-      'A good digital experience combines visual quality with practical functionality. Keeping the interface clean and the user journey straightforward can make a meaningful difference for visitors.',
-    name: 'Sample Client 06',
-    projectType: 'Digital Product Development',
+      '"Having direct access to senior engineers instead of dealing with ticketing overhead makes our ongoing maintenance painless. Security patches, performance tuning, and new features roll out fast."',
+    name: 'Tharindu Silva',
+    role: 'Managing Partner',
+    company: 'Horizon Ventures',
+    initials: 'TS',
+    avatarColor: 'bg-primary',
   },
 ]
 
