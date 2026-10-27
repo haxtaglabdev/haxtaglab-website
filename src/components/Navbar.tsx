@@ -51,7 +51,7 @@ export function Navbar() {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${active === link.href ? 'text-text-main' : 'text-text-muted'}`}
+              className={`text-sm font-medium transition-colors hover:text-primary ${active === link.href ? 'hover:text-primary text-text-main' : 'text-text-muted'}`}
               href={link.href}
             >
               {link.label}

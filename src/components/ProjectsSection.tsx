@@ -27,7 +27,7 @@ export function ProjectsSection() {
               >
                 <div className="w-full overflow-hidden rounded-xl border border-white/20 shadow-xl">
                   <BrowserFrame url={project.urlLabel} trafficLights>
-                    <div className="h-80 w-full overflow-hidden bg-slate-900">
+                    <div className="h-110 w-full overflow-hidden bg-slate-900">
                       <img
                         alt={project.imageAlt}
                         className="h-full w-full object-cover object-top"
