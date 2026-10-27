@@ -215,7 +215,7 @@ export function ContactSection() {
                       className="font-medium text-white transition-colors hover:text-cyan-accent"
                       href="mailto:contact@haxtaglab.com"
                     >
-                      contact@haxtaglab.com
+                      haxtaglab@gmail.com
                     </a>
                   </div>
                 </div>
@@ -223,7 +223,7 @@ export function ContactSection() {
                   <ScheduleIcon className="mt-0.5 h-[18px] w-[18px] text-cyan-accent" />
                   <div>
                     <span className="block text-xs text-slate-400">Typical Response Time</span>
-                    <span className="font-medium text-white">Within 24 to 48 business hours</span>
+                    <span className="font-medium text-white">Within 24 business hours</span>
                   </div>
                 </div>
               </div>

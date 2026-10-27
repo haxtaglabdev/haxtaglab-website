@@ -8,7 +8,7 @@ export function ProjectsSection() {
       <div className="mx-auto flex max-w-[1440px] flex-col gap-16 px-8 lg:px-16">
         <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
           <span className="mb-3 block text-xs font-semibold tracking-wider text-primary uppercase">
-            Portfolio
+            Projects
           </span>
           <h2 className="font-heading text-3xl leading-tight font-bold tracking-tight text-navy sm:text-4xl lg:text-5xl">
             Selected Work, Built for Real Needs.
@@ -17,10 +17,6 @@ export function ProjectsSection() {
             Explore recent production systems deployed for active businesses, engineered to simplify
             customer interaction and streamline back-office operations.
           </p>
-          <div className="mt-6 inline-flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-base px-4 py-2 text-xs font-medium text-text-muted">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            <span>Live Production Systems</span>
-          </div>
         </div>
 
         <div className="flex flex-col gap-16">
